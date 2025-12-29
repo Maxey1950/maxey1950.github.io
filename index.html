@@ -1,1 +1,316 @@
 sdasdasdasd
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxey's Visuals</title>
+    <style>	
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #00d4ff, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #aaa;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #00d4ff, #9b59b6);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        .features {
+            padding: 80px 50px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #00d4ff;
+        }
+
+        .feature-card p {
+            color: #aaa;
+        }
+
+        .screenshots {
+            padding: 80px 50px;
+        }
+
+        .screenshots h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .screenshot {
+            background: linear-gradient(135deg, #2a2a4a, #1a1a3a);
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .download {
+            padding: 80px 50px;
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .download h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .download p {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .version {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 40px 50px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #00d4ff;
+        }
+
+        footer p {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .features, .screenshots, .download {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">⚡ Maxey's Visuals</div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="https://discord.gg/maxeysvisuals">Discord</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Maxey's Visuals</h1>
+        <p>Transform your gaming experience with stunning visual enhancements. Easy to install, free to use.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('download').scrollIntoView()">Download Now</button>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Color Correction</h3>
+                <p>Enhanced colors and vibrant visuals that make your game pop.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Bloom Effects</h3>
+                <p>Beautiful light bloom for a cinematic gaming experience.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌙</div>
+                <h3>Ambient Occlusion</h3>
+                <p>Realistic shadows and depth for immersive environments.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Performance Mode</h3>
+                <p>Optimized shaders that look great without FPS drops.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <h3>Easy Setup</h3>
+                <p>One-click installation with automatic configuration.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Customizable</h3>
+                <p>Adjust every setting to match your personal preference.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots" id="screenshots">
+        <h2>Screenshots</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot">[Before/After Image 1]</div>
+            <div class="screenshot">[Before/After Image 2]</div>
+            <div class="screenshot">[Before/After Image 3]</div>
+        </div>
+    </section>
+
+    <section class="download" id="download">
+        <h2>Download Maxey's Visuals</h2>
+        <div class="version">Beta 1 | Last Updated: 12/25/2025</div>
+        <p>Free and open source. Compatible with most games.</p>
+        <button class="btn btn-primary">⬇️ Download for Windows</button>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://discord.gg/maxeysvisuals" id="discord">Discord</a>
+        </div>
+        <p>&copy; 2025 Maxey's Visuals. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
