@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxey's Visuals</title>
-    <style>	
+    <style> 
         * {
             margin: 0;
             padding: 0;
@@ -14,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background-color: #16192b; 
             color: #fff;
             min-height: 100vh;
         }
@@ -23,175 +22,235 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
-            background: rgba(0,0,0,0.3);
+            padding: 15px 60px;
+            background: #0f111a;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
             color: #00d4ff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 35px;
             list-style: none;
         }
 
         .nav-links a {
             color: #fff;
             text-decoration: none;
+            font-size: 14px;
             transition: color 0.3s;
         }
 
+        html {
+    scroll-behavior: smooth;
+}
+        
         .nav-links a:hover {
             color: #00d4ff;
         }
 
         .hero {
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px 160px 20px;
+            background-image: linear-gradient(rgba(22, 25, 43, 0.6), rgba(22, 25, 43, 0.6)), url('aura mais ego.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .hero h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #00d4ff, #9b59b6);
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            background: linear-gradient(90deg, #5dade2, #85929e); 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero p {
-            font-size: 20px;
-            color: #aaa;
-            margin-bottom: 40px;
-            max-width: 600px;
+            font-size: 18px;
+            color: #8f9ca7;
+            margin-bottom: 45px;
+            max-width: 550px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.5;
         }
 
         .btn {
-            padding: 15px 40px;
-            font-size: 18px;
+            padding: 14px 45px;
+            font-size: 16px;
+            font-weight: 500;
             border: none;
-            border-radius: 30px;
+            border-radius: 25px;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .nav-btn {
+            background: linear-gradient(90deg, rgba(0, 102, 153, 0.4) 0%, rgba(0, 164, 189, 0.4) 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 8px 18px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            transition: all 0.3s ease;
         }
 
+        .nav-btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(90deg, rgba(0, 102, 153, 1) 0%, rgba(0, 164, 189, 1) 100%);
+            box-shadow: 0 4px 12px rgba(0, 164, 189, 0.5);
+        }
+        
         .btn-primary {
-            background: linear-gradient(90deg, #00d4ff, #9b59b6);
+            background: linear-gradient(90deg, #006699 0%, #00a4bd 100%);
             color: #fff;
         }
 
         .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+            transform: scale(1.03);
+            box-shadow: 0 5px 20px rgba(0, 164, 189, 0.4);
         }
 
         .features {
-            padding: 80px 50px;
-            background: rgba(0,0,0,0.2);
-        }
+    padding: 100px 80px;
+    
+    background: rgba(19, 22, 34, 0.8); 
+    
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
 
         .features h2 {
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 50px;
+            font-size: 40px;
+            margin-bottom: 60px;
+            font-weight: bold;
         }
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .feature-card {
-            background: rgba(255,255,255,0.05);
-            padding: 30px;
-            border-radius: 15px;
+            background: #1a1d2c;
+            padding: 40px 30px;
+            border-radius: 12px;
             text-align: center;
             transition: transform 0.3s;
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
         }
 
         .feature-icon {
-            font-size: 50px;
+            font-size: 40px;
             margin-bottom: 20px;
+            display: block;
         }
 
         .feature-card h3 {
             margin-bottom: 15px;
             color: #00d4ff;
+            font-size: 18px;
         }
 
         .feature-card p {
-            color: #aaa;
+            color: #8f9ca7;
+            font-size: 14px;
+            line-height: 1.6;
         }
 
         .screenshots {
-            padding: 80px 50px;
+            padding: 100px 80px;
+            background: #0f111a;
         }
 
         .screenshots h2 {
             text-align: center;
-            font-size: 36px;
+            font-size: 40px;
             margin-bottom: 50px;
         }
 
         .screenshot-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .screenshot {
-            background: linear-gradient(135deg, #2a2a4a, #1a1a3a);
-            height: 200px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #555;
-            font-size: 14px;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
         }
 
         .download {
-            padding: 80px 50px;
+            padding: 100px 20px 180px 20px;
             text-align: center;
-            background: rgba(0,0,0,0.2);
+            background: #131622;
         }
 
         .download h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .download p {
-            color: #aaa;
-            margin-bottom: 30px;
+            font-size: 40px;
+            margin-bottom: 25px;
         }
 
         .version {
             display: inline-block;
-            background: rgba(255,255,255,0.1);
-            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.07);
+            padding: 12px 24px;
             border-radius: 20px;
+            margin-bottom: 35px;
+            font-size: 14px;
+            color: #ccc;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .download p {
+            color: #8f9ca7;
             margin-bottom: 30px;
+            font-size: 16px;
         }
 
         footer {
-            padding: 40px 50px;
+            padding: 40px 80px;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            background: #0f111a;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer svg {
+            width: 16px !important;
+            height: 16px !important;
+            display: inline-block;
+            vertical-align: middle;
         }
 
         .social-links {
@@ -201,21 +260,55 @@
             margin-bottom: 20px;
         }
 
+        .social-title {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    
+    color: rgba(255, 255, 255, 0.4); 
+}
+        
         .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             color: #fff;
             text-decoration: none;
-            padding: 10px 20px;
-            background: rgba(255,255,255,0.1);
+            padding: 10px 25px;
+            background: #1a1d2c;
             border-radius: 5px;
+            font-size: 14px;
             transition: background 0.3s;
         }
 
         .social-links a:hover {
             background: #00d4ff;
+            color: #0f111a;
         }
 
+        .social-links a#youtube:hover {
+            background: #ff0000 !important;
+            color: #fff !important;
+        }
+.social-links a#github:hover {
+    background: #ffffff !important;
+    color: #0f111a !important;
+}
+.social-links a#discord:hover {
+    background: #5865F2 !important;
+    color: #ffffff !important;
+}
+        
         footer p {
-            color: #666;
+            color: #4a5264;
+            font-size: 13px;
+        }
+
+        @media (max-width: 992px) {
+            .feature-grid, .screenshot-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -226,31 +319,36 @@
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 40px;
+            }
+
+            .feature-grid, .screenshot-grid {
+                grid-template-columns: 1fr;
             }
 
             .features, .screenshots, .download {
-                padding: 50px 20px;
+                padding: 60px 20px;
             }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">⚡ Maxey's Visuals</div>
-        <ul class="nav-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#screenshots">Screenshots</a></li>
-            <li><a href="#download">Download</a></li>
-            <li><a href="https://discord.gg/MdfebQgXKe">Discord</a></li>
-        </ul>
-    </nav>
+   <nav>
+    <div class="logo">⚡ Maxey's Visuals</div>
+    
+    <div class="nav-buttons-container">
+        <a href="#features" class="nav-btn">Features</a>
+        <a href="#screenshots" class="nav-btn">Screenshots</a>
+        <a href="https://discord.gg/MdfebQgXKe" target="_blank" class="nav-btn">Discord</a>
+    </div>
+</nav>
 
     <section class="hero">
         <h1>Maxey's Visuals</h1>
         <p>Transform your gaming experience with stunning visual enhancements. Easy to install, free to use.</p>
-        <button class="btn btn-primary" onclick="document.getElementById('download').scrollIntoView()">Download Now</button>
+        
+        <a href="MaxeysVisuals2.2aura+ego.zip" download class="btn btn-primary"> Download for Windows</a>
     </section>
 
     <section class="features" id="features">
@@ -292,32 +390,39 @@
     <section class="screenshots" id="screenshots">
         <h2>Screenshots</h2>
         <div class="screenshot-grid">
-            <div class="screenshot">[Before/After Image 1]</div>
-            <div class="screenshot">[Before/After Image 2]</div>
-            <div class="screenshot">[Before/After Image 3]</div>
+            <div class="screenshot">
+                <img src="Maxey Visuals site test xd.png" alt="Screenshot 1">
+            </div>
+            <div class="screenshot">
+                <img src="Marcio visuais 3.0.png" alt="Screenshot 2">
+            </div>
+            <div class="screenshot">
+                <img src="Marcio visuais 2.0.png" alt="Screenshot 3">
+            </div>
         </div>
     </section>
 
-<section class="download" id="download">
-    <h2>Download Maxey's Visuals</h2>
-    <div class="version">Working  | Last Working Version: version-689e359b09ad43b0 </div>
-    <p>Free and open source. Compatible with most games.</p>
+    <section class="download" id="download">
+        <h2>Thank you for choosing Maxey's Visuals</h2>
+<div class="version"><strong>Working in Version(s)</strong> : version-4b6315bf1f0a4dbb </div>
+        <p>Free and open source. Compatible with most games.</p>
 
-    <a href="https://discord.gg/MdfebQgXKe" 
-       target="_blank" 
-       rel="noopener noreferrer">
-        <button class="btn btn-primary">⬇️ Download for Windows</button>
-    </a>
-</section>
+    </section>
 
-    <footer>
+        <footer>
+    <p class="social-title">Our Social Medias ⬇️⬇️</p>
+    
         <div class="social-links">
-            <a href="https://discord.gg/MdfebQgXKe" id="discord">Discord</a>
-            <a href="https://github.com/Maxey1950/MaxeysVisuals/" id="github">Source</a>
-
-        </div>
-        <p>&copy; 2026 Maxey Tech Inc. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+            <a href="https://discord.gg/MdfebQgXKe" target="_blank" id="discord">
+    <svg viewBox="0 0 127.14 96.36" fill="currentColor" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;">
+        <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.72-11A68.6,68.6,0,0,1,28,80.17c.85-.63,1.68-1.3,2.48-2a75.52,75.52,0,0,0,93.44,0c.8,Event,1.63.11,2.48,2a68.43,68.43,0,0,1-10.74,5.17,74.37,74.37,0,0,0,6.72,11,105.73,105.73,0,0,0,31-18.83C129.87,48.5,123.86,25.74,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.92,46,53.7,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.16,46,95.94,53,91,65.69,84.69,65.69Z"/>
+    </svg>
+    <span style="color: #ffffff; display: inline-block; vertical-align: middle;">Discord</span>
+</a>
+            <a href="https://github.com/Maxey1950/MaxeysVisuals/" target="_blank" id="github">📄 Source</a>
+            <a href="https://youtube.com/@maxeysvisuals" target="_blank" id="youtube">
+    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    </svg>
+    <span style="color: #ffffff; display: inline-block; vertical-align: middle;">YouTube</span>
+</a>
